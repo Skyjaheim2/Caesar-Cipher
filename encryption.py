@@ -48,10 +48,10 @@ def encrypt():
 
 
 
-    print("----------" + "-" *len(encrypt_text) if len(encrypt_text) <= 120 else "-"*120)
+    print("------------" + "-" *len(encrypt_text) if len(encrypt_text) <= 120 else "-"*120)
     print("ENCRYPTED: ["+encrypt_text+"]")
     print()
-    print("----------" + "-" * len(encrypt_text) if len(encrypt_text) <= 120 else "-" * 120)
+    print("------------" + "-" * len(encrypt_text) if len(encrypt_text) <= 120 else "-" * 120)
     while True:
         print()
         back = input("Press (B) To Go Back: ").lower()
@@ -107,12 +107,12 @@ def decrypt():
     elif have_key == "no" or have_key == "n":
         print()
         while True:
-            rep_times = input("Enter How Many Times This Algorithm Runs:\nPress (B) To Run Until Encryption Is Broken:\n").lower()
-            if rep_times == "b" or rep_times.isdigit():
+            rep_times = input("Enter How Many Times This Algorithm Runs:\nPress (R) To Run Until Encryption Is Broken:\n").lower()
+            if rep_times == "r" or rep_times.isdigit():
                 break
             else:
                 print("Enter 'B' Or An Integer")
-        if rep_times == "b":
+        if rep_times == "r":
             key = 0
             while rep_times != 0:
                 decrypt = ''
@@ -126,10 +126,10 @@ def decrypt():
 
                 if " " in decrypt:
                     print()
-                    print("-----------" + "-" * len(decrypt) if len(decrypt) <= 120 else "-"*120)
+                    print("-------------" + "-" * len(decrypt) if len(decrypt) <= 120 else "-"*120)
                     print("DECRYPTED:", decrypt)
                     print("KEY:", key - 1)
-                    print("-----------" + "-" * len(decrypt) if len(decrypt) <= 120 else "-"*120)
+                    print("-------------" + "-" * len(decrypt) if len(decrypt) <= 120 else "-"*120)
                     print()
                     encryption_back()
 
